@@ -1,0 +1,122 @@
+body 
+{
+    background-color: rgb(0, 0, 0);
+    background-size: cover; /* Ensure the background image covers the entire body */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+h1
+{
+    text-align: center;
+    font-size:x-large;
+}
+form {
+    text-align: center; /* Center-align the contents of the form */
+}
+
+/* Style for the search input */
+input[type="text"] 
+{
+    margin-bottom: 10px;
+    padding: 10px; /* Add some padding */
+    border-radius: 20px; /* Add rounded corners */
+    border: none; /* Remove the border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    width: 300px; /* Set a fixed width */
+    outline: none; /* Remove the default focus outline */
+}
+
+/* Style for the submit button */
+button[type="submit"] 
+{
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove the border */
+    border-radius: 20px; /* Add rounded corners */
+    background-color: #4CAF50; /* Green background color */
+    color: white; /* White text color */
+    cursor: pointer; /* Add cursor pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover effect for the submit button */
+button[type="submit"]:hover 
+{
+    background-color: #45a049; /* Darker green background color on hover */
+}
+tr
+{
+    text-align: center;
+    border-radius: 20px; /* Add rounded corners */
+    border: black;
+    color: white; /* White text color */
+}
+table
+{
+    width: auto;
+    margin: 20px auto;
+    border: 1px solid white;
+    border-top:1px solid white;
+}
+table td 
+{
+    border: 1px solid white;
+    padding: 10px;
+}
+#ICR
+{
+    width: 130px;
+}
+
+
+table th 
+{
+    padding: 20px;
+    background: #45a049;
+}
+
+/* begin nav bar styling */
+.nav-container 
+{
+    padding: 10px 50px;
+    height: 100px;
+    background: #4CAF50;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo 
+{
+    font-size: xx-large;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-menu 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-menu a 
+{
+    background: white;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.2s;
+}
+.nav-menu a:hover 
+{
+    background: black;
+    color: white;
+}

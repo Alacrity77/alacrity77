@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Carb Finder</title>
+        <link href="/static/style.css" rel="stylesheet" type="text/css" media="all">
+    </head>
+
+<body>
+    <!-- nav bar -->
+    <div class="nav-container">
+        <div class="logo">Carb Finder</div>
+        </div>
+    </div>
+
+    <!-- this will show the header on the webpage-->
+    <h1>
+        Search for a food below
+    </h1>
+
+    <form action="/" method="GET">
+        <input type="text" id="ICR" name="ICR" placeholder="Input your ICR value." value="{{ ICR_VALUE }}">
+        <input type="text" id="search" name="search" placeholder = "Search for food here" value="{{ search_term }}">
+        <button type="submit">Submit</button>
+    </form>
+    
+
+    <!-- if given a search it will display the food and carb/sugar amount else it will display no results found-->
+    {% if search_term and foods %}
+    <table>
+        <tr>
+            <th style="width:500px;">(Per 100 Grams)</th>
+            <th>Carbs</th>
+            <th> Required Insulin (ICR)</th>
+        </tr>
+        {% for food in foods %}
+        <tr>
+            <td>{{ food[0] }}</td>
+            <td>{{ food[1] }}</td>
+            <td>{{ food[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% elif search_term and not foods %}
+    <p>No results found.</p>
+    {% endif %}
+</body>
+</html>
