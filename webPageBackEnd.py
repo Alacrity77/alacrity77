@@ -36,7 +36,7 @@ def index():
                     reqInsulin = 0
             foods.append((name, carbs, reqInsulin))
     db.close()
-    return render_template('frontPage.html', foods=foods, search_term=search_term, ICR_VALUE=ICR_Value)
+    return render_template('index.html', foods=foods, search_term=search_term, ICR_VALUE=ICR_Value)
 
 if __name__ == '__main__':
     app.run(debug=True)
